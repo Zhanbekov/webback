@@ -12,3 +12,8 @@ class ArticleSerialize(serializers.Serializer):
     title = serializers.CharField()
     image = serializers.CharField()
     text = serializers.CharField()
+
+class PublisherSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.Publisher
+        fields = 'id', 'name'
